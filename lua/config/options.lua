@@ -5,3 +5,4 @@
 local o = vim.opt
 
 o.background = "light"
+o.winborder = "rounded"
