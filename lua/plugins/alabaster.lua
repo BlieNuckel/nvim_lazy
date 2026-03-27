@@ -102,6 +102,11 @@ return {
       hl["@lsp.type.property"] = { fg = c.fg }
       hl["@property.yaml"] = { fg = c.fg }
 
+      hl["@function.call"] = { fg = c.fg, italic = false }
+      hl["@function.method.call"] = { fg = c.fg, italic = false }
+      hl["@lsp.type.function"] = { fg = c.fg }
+      hl["@lsp.type.method"] = { fg = c.fg }
+
       hl["@punctuation.bracket"] = { fg = "#000000" }
       hl["@punctuation.delimiter"] = { fg = "#000000" }
       hl["@constructor"] = { fg = "#000000" }
@@ -116,6 +121,12 @@ return {
       hl.FlashMatch = { fg = "#000000", bg = "#e0e0e0" }
       hl.FlashLabel = { fg = "#000000", bg = "#fce094", bold = true }
       hl.FlashCurrent = { fg = "#000000", bg = "#c8ddf0" }
+
+      hl.FloatBorder = { fg = "#6E3DC2" }
+      hl.FloatTitle = { fg = "#6E3DC2" }
+      hl.SnacksPickerInputBorder = { fg = "#6E3DC2" }
+      hl.SnacksPickerInputTitle = { fg = "#6E3DC2" }
+      hl.SnacksPickerBoxTitle = { fg = "#6E3DC2" }
     end,
   },
 }
