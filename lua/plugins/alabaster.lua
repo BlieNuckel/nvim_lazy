@@ -23,6 +23,24 @@ return {
       c.bg_gutter = "#000000"
       c.bg_sidebar = "#ffffff"
       c.bg_visual = "#e0e0e0"
+      c.terminal = {
+        black = "#000000",
+        black_bright = "#7a7a7a",
+        red = "#C62828",
+        red_bright = "#C62828",
+        green = "#59B55D",
+        green_bright = "#59B55D",
+        yellow = "#AD8D00",
+        yellow_bright = "#AD8D00",
+        blue = "#000000",
+        blue_bright = "#000000",
+        magenta = "#6E3DC2",
+        magenta_bright = "#6E3DC2",
+        cyan = "#007676",
+        cyan_bright = "#007676",
+        white = "#000000",
+        white_bright = "#000000",
+      }
     end,
     on_highlights = function(hl, c)
       -- Comments
@@ -38,7 +56,6 @@ return {
       hl["@function.definition"] = colors.definition
       hl["@variable.definition"] = colors.definition
       hl["@type.definition"] = colors.type
-      hl["@lsp.mod.declaration"] = colors.definition
       hl["@lsp.mod.definition"] = colors.definition
       hl["@lsp.typemod.function.declaration"] = colors.definition
       hl["@lsp.typemod.function.definition"] = colors.definition
@@ -53,7 +70,7 @@ return {
       hl["@lsp.typemod.parameter.declaration"] = colors.definition
 
       -- Readonly/static modifiers
-      hl["@lsp.mod.readonly"] = { italic = true }
+      hl["@lsp.mod.readonly"] = { italic = false }
       hl["@lsp.mod.static"] = { italic = true }
 
       -- Strings and literals
@@ -95,6 +112,8 @@ return {
       hl["@attribute"] = colors.attribute
       hl["@attribute.builtin"] = colors.attribute
 
+      hl["@variable.member"] = { fg = c.fg }
+
       -- Plain text elements
       hl["@lsp.type.parameter"] = { fg = c.fg }
       hl["@variable.parameter"] = { fg = c.fg }
@@ -121,6 +140,9 @@ return {
       hl.FlashMatch = { fg = "#000000", bg = "#e0e0e0" }
       hl.FlashLabel = { fg = "#000000", bg = "#fce094", bold = true }
       hl.FlashCurrent = { fg = "#000000", bg = "#c8ddf0" }
+
+      hl.Directory = { fg = c.fg }
+      hl.SnacksPickerFile = { fg = c.fg }
 
       hl.FloatBorder = { fg = "#6E3DC2" }
       hl.FloatTitle = { fg = "#6E3DC2" }

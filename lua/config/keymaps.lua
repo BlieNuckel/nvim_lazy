@@ -5,3 +5,9 @@
 local map = vim.keymap.set
 
 map("i", "jk", "<esc>")
+map("i", "<C-h>", "<Left>")
+map("i", "<C-j>", "<Down>")
+map("i", "<C-k>", "<Up>")
+map("i", "<C-l>", "<Right>")
+map("n", ";", ":")
+map("n", ":", ";")
