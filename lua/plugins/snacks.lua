@@ -30,6 +30,14 @@ end
 return {
   "folke/snacks.nvim",
   opts = {
+    lazygit = {
+      win = {
+        keys = {
+          hide_n = { "<C-q>", function(self) self:hide() end, mode = "n", desc = "Hide" },
+          hide_t = { "<C-q>", function(self) self:hide() end, mode = "t", desc = "Hide" },
+        },
+      },
+    },
     picker = {
       sources = {
         explorer = {
