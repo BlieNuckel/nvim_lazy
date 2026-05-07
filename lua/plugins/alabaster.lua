@@ -89,6 +89,10 @@ local highlight_groups = {
   ["@punctuation.delimiter"] = { fg = fg },
   ["@constructor"] = { fg = fg },
   Delimiter = { fg = fg },
+
+  SnacksDashboardKey = { fg = colors.const.fg },
+  SnacksDashboardDesc = { fg = fg },
+  SnacksDashboardIcon = { fg = colors.keyword.fg },
 }
 
 return {
