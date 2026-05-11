@@ -53,9 +53,10 @@ return {
                   main = picker.main,
                   filter = win_filter,
                 })
-                if win then
-                  picker.main = win
+                if not win then
+                  return
                 end
+                picker.main = win
                 Snacks.picker.actions.jump(picker, item, action or {})
               end
             end,
