@@ -8,13 +8,8 @@ return {
 
     local set = vim.keymap.set
 
-    -- Add or skip cursor above/below the main cursor.
-    set({ "n", "x" }, "<up>", function()
-      mc.lineAddCursor(-1)
-    end)
-    set({ "n", "x" }, "<down>", function()
-      mc.lineAddCursor(1)
-    end)
+    -- <up>/<down> live in lua/config/keymaps.lua so they load AFTER LazyVim's
+    -- default <Up>/<Down> mappings (which would otherwise clobber them).
     set({ "n", "x" }, "<leader><up>", function()
       mc.lineSkipCursor(-1)
     end)
