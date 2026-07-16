@@ -93,9 +93,6 @@ local highlight_groups = {
   SnacksDashboardKey = { fg = colors.const.fg },
   SnacksDashboardDesc = { fg = fg },
   SnacksDashboardIcon = { fg = colors.keyword.fg },
-
-  NeogitSubtleText = { fg = colors.keyword.fg },
-  NeogitObjectId = { fg = colors.keyword.fg },
 }
 
 return {
